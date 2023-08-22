@@ -1,0 +1,75 @@
+package org.example.dto;
+
+import java.time.LocalDateTime;
+
+public class Ticket implements Comparable<Ticket>{
+    private Source Origin;
+    private Source Destination;
+    private LocalDateTime DepartureDateTime;
+    private LocalDateTime ArrivalDateTime;
+    private String Carrier;
+    private Integer Stops;
+    private Integer Price;
+
+
+    public Integer getPrice() {
+        return Price;
+    }
+
+    public void setPrice(Integer price) {
+        Price = price;
+    }
+
+    public Integer getStops() {
+        return Stops;
+    }
+
+    public void setStops(Integer stops) {
+        Stops = stops;
+    }
+
+    public Source getDestination() {
+        return Destination;
+    }
+
+    public void setDestination(Source destination) {
+        Destination = destination;
+    }
+
+    public Source getOrigin() {
+        return Origin;
+    }
+
+    public void setOrigin(Source origin) {
+        Origin = origin;
+    }
+
+    public String getCarrier() {
+        return Carrier;
+    }
+
+    public void setCarrier(String carrier) {
+        Carrier = carrier;
+    }
+
+    public LocalDateTime getArrivalDateTime() {
+        return ArrivalDateTime;
+    }
+
+    public void setArrivalDateTime(LocalDateTime arrivalDateTime) {
+        ArrivalDateTime = arrivalDateTime;
+    }
+
+    public LocalDateTime getDepartureDateTime() {
+        return DepartureDateTime;
+    }
+
+    public void setDepartureDateTime(LocalDateTime departureDateTime) {
+        DepartureDateTime = departureDateTime;
+    }
+
+    @Override
+    public int compareTo(Ticket otherTicket) {
+        return Integer.compare(getPrice(), otherTicket.getPrice());
+    }
+}
