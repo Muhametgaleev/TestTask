@@ -3,69 +3,69 @@ package org.example.entities;
 import java.time.LocalDateTime;
 
 public class Ticket implements Comparable<Ticket>{
-    private Source Origin;
-    private Source Destination;
-    private LocalDateTime DepartureDateTime;
-    private LocalDateTime ArrivalDateTime;
-    private String Carrier;
-    private Integer Stops;
-    private Integer Price;
+    private Source origin;
+    private Source destination;
+    private LocalDateTime departureDateTime;
+    private LocalDateTime arrivalDateTime;
+    private String carrier;
+    private Integer stops;
+    private Integer price;
 
 
     public Integer getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(Integer price) {
-        Price = price;
+        this.price = price;
     }
 
     public Integer getStops() {
-        return Stops;
+        return stops;
     }
 
     public void setStops(Integer stops) {
-        Stops = stops;
+        this.stops = stops;
     }
 
     public Source getDestination() {
-        return Destination;
+        return destination;
     }
 
     public void setDestination(Source destination) {
-        Destination = destination;
+        this.destination = destination;
     }
 
     public Source getOrigin() {
-        return Origin;
+        return origin;
     }
 
     public void setOrigin(Source origin) {
-        Origin = origin;
+        this.origin = origin;
     }
 
     public String getCarrier() {
-        return Carrier;
+        return carrier;
     }
 
     public void setCarrier(String carrier) {
-        Carrier = carrier;
+        this.carrier = carrier;
     }
 
     public LocalDateTime getArrivalDateTime() {
-        return ArrivalDateTime;
+        return arrivalDateTime;
     }
 
     public void setArrivalDateTime(LocalDateTime arrivalDateTime) {
-        ArrivalDateTime = arrivalDateTime;
+        this.arrivalDateTime = arrivalDateTime;
     }
 
     public LocalDateTime getDepartureDateTime() {
-        return DepartureDateTime;
+        return departureDateTime;
     }
 
     public void setDepartureDateTime(LocalDateTime departureDateTime) {
-        DepartureDateTime = departureDateTime;
+        this.departureDateTime = departureDateTime;
     }
 
     @Override
