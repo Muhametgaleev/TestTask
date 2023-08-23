@@ -18,7 +18,6 @@ public class Main {
         TicketParser ticketParser = new TicketParser();
         TimeService timeService = new TimeService();
         SourceService sourceService = new SourceService();
-        TicketService ticketService = new TicketService();
         //добавляем аэропорты и разницу времени по Гринвичу
         timeService.addOffset(new Source("TLV", "Тель-Авив"), 3L);
         timeService.addOffset(new Source("VVO", "Владивосток"), 10L);
@@ -30,12 +29,13 @@ public class Main {
         sourceService.addSources("UFA", "Уфа");
         sourceService.addSources("LRN", "Ларнака");
 
+        TicketService ticketService = new TicketService(timeService);
 
         String filename = "src\\main\\resources\\tickets.json";
         List<Ticket> tickets = ticketParser.getTicketsFromJson(filename);
         // проверили, что данные в json корректны
         sourceService.existSource(tickets);
-        durations = ticketService.minTime(tickets, timeService,"TLV", "VVO");
+        durations = ticketService.minTime(tickets,"TLV", "VVO");
 
         durations.forEach((key, value) -> System.out.println(key + " " + value.toDays()/365 + " лет " + value.toDays()%365 +
                 " дней " + value.toHours()%24 + " часов " + value.toMinutes()%60 + " минут " + value.toSeconds()%60 + " секунд"));

@@ -6,8 +6,12 @@ import java.time.Duration;
 import java.util.*;
 
 public class TicketService implements TicketServiceInterface{
+    private TimeService timeService;
+    public TicketService(TimeService timeService) {
+        this.timeService = timeService;
+    }
     @Override
-    public Map<String, Duration> minTime(List<Ticket> tickets, TimeService timeService, String nameDestination, String nameOrigin) {
+    public Map<String, Duration> minTime(List<Ticket> tickets, String nameDestination, String nameOrigin) {
         Map<String, Duration> minTimeMap = new HashMap<>();
 
 

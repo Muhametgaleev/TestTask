@@ -8,6 +8,6 @@ import java.util.Map;
 
 public interface TicketServiceInterface {
     // стринга и разница во времени
-    Map<String, Duration> minTime(List<Ticket> tickets, TimeService timeService, String nameDestination, String nameOrigin);
+    Map<String, Duration> minTime(List<Ticket> tickets, String nameDestination, String nameOrigin);
     float difference(List<Ticket> tickets, String nameDestination, String nameOrigin);
 }
