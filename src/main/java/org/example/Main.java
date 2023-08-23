@@ -1,6 +1,6 @@
 package org.example;
 
-import org.apache.commons.collections.map.HashedMap;
+
 import org.example.dto.Source;
 import org.example.dto.Ticket;
 import org.example.services.SourceService;
@@ -17,7 +17,7 @@ import java.util.Map;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Map<String, Duration> durations = new HashMap<>();
+        Map<String, Duration> durations;
         TicketParser ticketParser = new TicketParser();
         TimeService timeService = new TimeService();
         SourceService sourceService = new SourceService();
@@ -41,9 +41,9 @@ public class Main {
         durations = ticketService.minTime(tickets, timeService,"TLV", "VVO");
 
         durations.forEach((key, value) -> System.out.println(key + " " + value.toDays()/365 + " лет " + value.toDays()%365 +
-                " дней " + value.toHours()%24 + " часов " + value.toMinutes()%60 + " минут " + value.toSeconds()%60 + "секунд"));
+                " дней " + value.toHours()%24 + " часов " + value.toMinutes()%60 + " минут " + value.toSeconds()%60 + " секунд"));
 
         // задание Б
-        System.out.println(ticketService.difference(tickets, "TLV", "VVO") + " разница в между средней ценой  и медианой для полета между городами  Владивосток и Тель-Авив");
+        System.out.println(ticketService.difference(tickets, "TLV", "VVO") + " разница между средней ценой  и медианой для полета между городами  Владивосток и Тель-Авив");
     }
 }

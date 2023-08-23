@@ -22,7 +22,7 @@ public class TicketParser {
         List<Ticket> tickets = new ArrayList<>();
 
         try  {
-            Reader reader = new FileReader(filename);
+            FileReader reader = new FileReader(filename);
             StringBuilder buffer = new StringBuilder();
             int c;
             boolean fl = false;
@@ -34,7 +34,7 @@ public class TicketParser {
                     buffer.append((char) c);
                 }
             }
-            JSONObject jsonObject = (JSONObject) parser.parse(String.valueOf(buffer));
+            JSONObject jsonObject = (JSONObject) parser.parse(buffer.toString());
             JSONArray jsonTickets = (JSONArray) jsonObject.get("tickets");
 
             for (Object o : jsonTickets) {
