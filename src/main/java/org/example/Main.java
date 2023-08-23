@@ -23,7 +23,7 @@ public class Main {
         SourceService sourceService = new SourceService();
         TicketService ticketService = new TicketService();
         //добавляем аэропорты и разницу времени по Гринвичу
-        timeService.addOffset(new Source("TLV", "Тель-Авив"), 1L);
+        timeService.addOffset(new Source("TLV", "Тель-Авив"), 3L);
         timeService.addOffset(new Source("VVO", "Владивосток"), 10L);
         timeService.addOffset(new Source("UFA", "Уфа"), 5L);
         timeService.addOffset(new Source("LRN", "Ларнака"), 3L);
@@ -34,7 +34,7 @@ public class Main {
         sourceService.addSources("LRN", "Ларнака");
 
 
-        String filename = "src\\main\\resources\\tickets.json";
+        String filename = "./tickets.json";
         List<Ticket> tickets = ticketParser.getTicketsFromJson(filename);
         // проверили, что данные в json корректны
         sourceService.existSource(tickets);
