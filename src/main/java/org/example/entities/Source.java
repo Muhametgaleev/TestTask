@@ -1,4 +1,4 @@
-package org.example.dto;
+package org.example.entities;
 
 public class Source{
     public Source( String name, String fullName){

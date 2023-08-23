@@ -1,7 +1,7 @@
 package org.example.services;
 
-import org.example.dto.Ticket;
-import org.example.dto.Source;
+import org.example.entities.Ticket;
+import org.example.entities.Source;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -9,7 +9,6 @@ import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.Reader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;

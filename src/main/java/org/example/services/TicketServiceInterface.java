@@ -1,6 +1,6 @@
 package org.example.services;
 
-import org.example.dto.Ticket;
+import org.example.entities.Ticket;
 
 import java.time.Duration;
 import java.util.List;

@@ -1,7 +1,7 @@
 package org.example.services;
 
 
-import org.example.dto.Ticket;
+import org.example.entities.Ticket;
 import org.example.exceptions.FooException;
 
 import java.util.HashMap;

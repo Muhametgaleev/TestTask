@@ -1,15 +1,14 @@
 package org.example;
 
 
-import org.example.dto.Source;
-import org.example.dto.Ticket;
+import org.example.entities.Source;
+import org.example.entities.Ticket;
 import org.example.services.SourceService;
 import org.example.services.TicketParser;
 import org.example.services.TicketService;
 import org.example.services.TimeService;
 
 import java.time.Duration;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
