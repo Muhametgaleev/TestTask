@@ -31,7 +31,7 @@ public class Main {
         sourceService.addSources("LRN", "Ларнака");
 
 
-        String filename = "./tickets.json";
+        String filename = "src\\main\\resources\\tickets.json";
         List<Ticket> tickets = ticketParser.getTicketsFromJson(filename);
         // проверили, что данные в json корректны
         sourceService.existSource(tickets);
