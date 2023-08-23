@@ -23,7 +23,7 @@ public class Main {
         SourceService sourceService = new SourceService();
         TicketService ticketService = new TicketService();
         //добавляем аэропорты и разницу времени по Гринвичу
-        timeService.addOffset(new Source("TLV", "Тель-Авив"), 1L);
+        timeService.addOffset(new Source("TLV", "Тель-Авив"), 3L);
         timeService.addOffset(new Source("VVO", "Владивосток"), 10L);
         timeService.addOffset(new Source("UFA", "Уфа"), 5L);
         timeService.addOffset(new Source("LRN", "Ларнака"), 3L);
