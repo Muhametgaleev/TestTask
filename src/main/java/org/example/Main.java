@@ -12,6 +12,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
+//TODO сделать юнит тесты
 public class Main {
     public static void main(String[] args) {
         Map<String, Duration> durations;

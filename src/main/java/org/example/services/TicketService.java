@@ -40,14 +40,12 @@ public class TicketService implements TicketServiceInterface{
         if(!ticktsByDepartureAndOrigin.isEmpty()) {
             int averagePrice = 0;
             int medianPrice;
-            int numberOfTickets = 0;
+            int numberOfTickets = ticktsByDepartureAndOrigin.size();
 
             Collections.sort(ticktsByDepartureAndOrigin);
 
             for (Ticket ticket : ticktsByDepartureAndOrigin) {
                 averagePrice += ticket.getPrice();
-                numberOfTickets += 1;
-
             }
             averagePrice /= numberOfTickets;
             if (numberOfTickets % 2 == 0) {

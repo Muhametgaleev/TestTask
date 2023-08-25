@@ -16,12 +16,12 @@ import java.util.List;
 
 
 public class TicketParser {
+    //TODO сделать считывание файла потоком
     public static List<Ticket> getTicketsFromJson(String filename) {
         JSONParser parser = new JSONParser();
         List<Ticket> tickets = new ArrayList<>();
 
-        try  {
-            FileReader reader = new FileReader(filename);
+        try (FileReader reader = new FileReader(filename)) {
             StringBuilder buffer = new StringBuilder();
             int c;
             boolean fl = false;
@@ -66,6 +66,6 @@ public class TicketParser {
             parseException.printStackTrace();
         }
 
-        return null;
+        return tickets;
     }
 }
